@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- tailwind link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="m-auto">
-    <header>
+    <!-- navbar -->
+    <header class="'m-auto">
         <div class="navbar bg-base-100">
             <div class="navbar-start">
               <div class="dropdown">
@@ -24,7 +26,7 @@
                   <li><a>Search</a></li>
                 </ul>
               </div>
-              <a class="btn btn-ghost text-xl ">Sky-ticket</a>
+              <a class="btn btn-ghost text-4xl text-black font-bold font-serif">Sky-ticket</a>
             </div>
             <div class="navbar-center hidden lg:flex">
               <ul class="menu menu-horizontal px-1">
@@ -36,12 +38,27 @@
                 <li><a>Search</a></li>
               </ul>
             </div>
-            <div class="navbar-end">
-              <a class="btn bg-[#114F071A]">Bus</a>
+            <div class="navbar-end flex">
+              <a class="btn bg-[#ddffd8] text-green-400 bold rounded-md ">Bus  <img src="images/bus btn.svg" alt=""></a>
+
             </div>
           </div>
     </header>
     <main>
+        <!-- banner -->
+    <section>
+        <div class="hero min-h-screen " style="background-image: url(./images/banner.png);">
+            <div class="hero-overlay bg-opacity-60 "></div>
+            <div class="hero-content text-center text-neutral-content">
+              <div class="max-w-md space-y-5">
+                <h1 class=" text-5xl  font-serif">End-to-End Travel with Sky-ticket</h1>
+                <h1 class=" text-5xl font-bold text-[#1DD100FF] font-serif ">Sky-ticket</h1>
+                <p class="">Travel with Sky-Drive.It is give you a great expreance .So go to take cut your ticket now.</p>
+                <button class="btn bg-[#1DD100FF] font-bold border-green-500 rounded-md">Buy Tickets</button>
+              </div>
+            </div>
+          </div>
+    </section>
 
     </main>
     <footer>
