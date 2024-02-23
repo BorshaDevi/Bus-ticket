@@ -13,19 +13,20 @@ function getNumberInter(elementId){
 }
 const seatNumber=getNumberInter('seat-number')
 const seatsLeft=getNumberInter('seats-left')
-
+seatnum=0
 const seatBtn=document.getElementsByClassName('seat-btn')
 for(let seat of seatBtn){
-    seat.addEventListener('click',function(event){
-        seatnum=0
-        if(seatnum<4){
+    
+    seat.addEventListener('click',function(event){ 
+        if(seatnum<4===true){
             seat.classList.add('seatbtn')
             seat.classList.add('text-white')
             seat.target.setAttribute('disabled',false)
             seat.classList.remove('seatbtn')
-        seatnum=seatnum+1
+            seatnum=seatnum+1
+
         }
-        
+
         
     })
 }
