@@ -7,6 +7,16 @@ function getAiPoribon(){
     AiPoribon.classList.remove('hidden')
 }
 
+// const seatNumber=document.getElementById('seat-number').innerText
+// console.log(seatNumber)
+
+getNumberInter('seat-number')
+function getNumberInter(elementId){
+    const re=document.getElementById(elementId).innerText;
+    const number=parseInt(re)
+    return number
+}
+
 
 
 
