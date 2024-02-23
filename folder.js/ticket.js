@@ -12,9 +12,14 @@ function getNumberInter(elementId){
     return number
 }
 const seatNumber=getNumberInter('seat-number')
-console.log(seatNumber)
 const seatsLeft=getNumberInter('seats-left')
-console.log(seatsLeft)
+
+const seatBtn=document.getElementsByClassName('seat-btn')
+for(let seat of seatBtn){
+    seat.addEventListener('click',function(event){
+        event.style.backgroundcolor='green'
+    })
+}
 
 
 
