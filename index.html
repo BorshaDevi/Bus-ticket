@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="m-auto">
+<body class="m-auto min-h-screen">
     <!-- navbar -->
     <header class="'m-auto">
         <div class="navbar bg-base-100">
@@ -54,7 +54,7 @@
                 <h1 class=" text-5xl  font-serif">End-to-End Travel with Sky-ticket</h1>
                 <h1 class=" text-5xl font-bold text-[#1DD100FF] font-serif ">Ai-Poribon</h1>
                 <p class="">Travel with Sky-Drive.It is give you a great expreance .So go to take cut your ticket now.</p>
-                <button class="btn bg-[#1DD100FF] font-bold border-green-500 rounded-md">Buy Tickets</button>
+                <button id="buy-ticket" class="btn bg-[#1DD100FF] font-bold border-green-500 rounded-md">Buy Tickets</button>
               </div>
             </div>
           </div>
@@ -125,7 +125,7 @@
     </section>
 
     <!-- ticket section -->
-    <section class="m-auto border-t-2 border-green-600 rounded-3xl mt-5">
+    <section id="Ai-poribon" class="m-auto border-t-2 border-green-600 rounded-3xl mt-5 min-h-svh">
       <!-- ticket -->
       <section class="m-auto bg-center mt-10">
         <!-- title -->
@@ -136,7 +136,7 @@
         </div>
       </section>
       <!-- detalis -->
-      <section class="mt-10 border-black">
+      <section class="mt-10 ">
       <div class=" flex  gap-20  justify-center items-center">
         <div>
           <div class="flex justify-around mt-3">
@@ -152,7 +152,7 @@
             </div>
            </div>
            <div >
-            <button class="btn bg-[#ddffd8] text-green-400 bold rounded-md flex">
+            <button class="btn bg-[#ddffd8] text-green-400 rounded-md flex">
               <img src="images/seat-green-filled.png">
               <p><span id="">40</span> seats left</p>
             </button>
@@ -185,22 +185,206 @@
           <p class="bg-green-400 rounded-[20px] text-center text-white text-3xl">£</p>
          </div>
           <div>
-            <h1 class="font-serif text-black  font-bold">550 Taka</h1>
+            <h1 class="font-serif text-black  font-bold"><span id="takaId">550</span>Taka</h1>
           <p>Per Seat</p>
           </div>
         </div>
       </div>
       </section>
-      <!-- ticket design -->
-      <section>
-
-
       </section>
+      <!-- seats  -->
+      <section class="mt-24 border-red-800 flex justify-evenly">
+        <!-- seats 1 -->
+        <section class="border-gray-950 lg:ml-20 lg:mr-20">
+        <div class="flex justify-start text-2xl font-semibold text-black ">
+          <h1>Select Your Seat</h1>
+        </div>
+        <hr class=" decoration-dotted underline mx-2 mt-3">
+        <div class="flex justify-between mt-7">
+         <div class="flex gap-2">
+          <img src="images/seat-gray.png" alt="">
+          <p>Available</p>
+         </div>
+         <div class="flex gap-2">
+          <img src="images/seat-green-filled.png" alt="">
+          <p class="text-green-400 font-semibold">Selected</p>
+         </div>
+        </div>
+        <hr class=" decoration-dotted underline mx-2 mt-3">
+        <!-- 40 seat (seats1) -->
+        <section class="grid  grid-cols-1">
+          <!-- A -->
+         <div class="mt-9">
+          <div class="flex space-x-2">
+            <p class="mt-3">A</p>
+          <div class="gap-32 flex">
+            <div class="space-x-8">
+              <button id="A1" class="btn px-8">A1</button>
+              <button id="A2" class="btn px-8">A2</button>
+             </div>
+              <div class="space-x-8">
+                <button id="A3" class="btn px-8">A3</button>
+              <button id="A4" class="btn px-8">A4</button>
+              </div>
+          </div>
+           </div>
+         </div>
+           <!-- B -->
+         <div class="mt-9">
+          <div class="flex space-x-2">
+            <p class="mt-3">B</p>
+          <div class="gap-32 flex">
+            <div class="space-x-8">
+              <button id="B1" class="btn px-8">B1</button>
+              <button id="B2" class="btn px-8">B2</button>
+             </div>
+              <div class="space-x-8">
+                <button id="B3" class="btn px-8">B3</button>
+              <button id="B4" class="btn px-8">B4</button>
+              </div>
+          </div>
+           </div>
+         </div>
+           <!-- C-->
+         <div class="mt-9">
+          <div class="flex space-x-2">
+            <p class="mt-3">C</p>
+          <div class="gap-32 flex">
+            <div class="space-x-8">
+              <button id="C1" class="btn px-8">C1</button>
+              <button id="C2" class="btn px-8">C2</button>
+             </div>
+              <div class="space-x-8">
+                <button id="C3" class="btn px-8">C3</button>
+              <button id="C4" class="btn px-8">C4</button>
+              </div>
+          </div>
+           </div>
+         </div>
+           <!-- D-->
+         <div class="mt-9">
+          <div class="flex space-x-2">
+            <p class="mt-3">D</p>
+          <div class="gap-32 flex">
+            <div class="space-x-8">
+              <button id="D1" class="btn px-8">D1</button>
+              <button id="D2" class="btn px-8">D2</button>
+             </div>
+              <div class="space-x-8">
+                <button id="D3" class="btn px-8">D3</button>
+              <button id="D4" class="btn px-8">D4</button>
+              </div>
+          </div>
+           </div>
+         </div>
+           <!-- E-->
+         <div class="mt-9">
+          <div class="flex space-x-2">
+            <p class="mt-3">E</p>
+          <div class="gap-32 flex">
+            <div class="space-x-8">
+              <button id="E1" class="btn px-8">E1</button>
+              <button id="E2" class="btn px-8">E2</button>
+             </div>
+              <div class="space-x-8">
+                <button id="E3" class="btn px-8">E3</button>
+              <button id="E4" class="btn px-8">E4</button>
+              </div>
+          </div>
+           </div>
+         </div>
+           <!-- F -->
+         <div class="mt-9">
+          <div class="flex space-x-2">
+            <p class="mt-3">F</p>
+          <div class="gap-32 flex">
+            <div class="space-x-8">
+              <button id="F1" class="btn px-8">F1</button>
+              <button id="F2" class="btn px-8">F2</button>
+             </div>
+              <div class="space-x-8">
+                <button id="F3" class="btn px-8">F3</button>
+              <button id="F4" class="btn px-8">F4</button>
+              </div>
+          </div>
+           </div>
+         </div>
+           <!-- G -->
+         <div class="mt-9">
+          <div class="flex space-x-2">
+            <p class="mt-3">G</p>
+          <div class="gap-32 flex">
+            <div class="space-x-8">
+              <button id="G1" class="btn px-8">G1</button>
+              <button id="G2" class="btn px-8">G2</button>
+             </div>
+              <div class="space-x-8">
+                <button id="G3" class="btn px-8">G3</button>
+              <button id="G4" class="btn px-8">G4</button>
+              </div>
+          </div>
+           </div>
+         </div>
+           <!-- H -->
+         <div class="mt-9">
+          <div class="flex space-x-2">
+            <p class="mt-3">H</p>
+          <div class="gap-32 flex">
+            <div class="space-x-8">
+              <button id="H1" class="btn px-8">H1</button>
+              <button id="H2" class="btn px-8">H2</button>
+             </div>
+              <div class="space-x-8">
+                <button id="H3" class="btn px-8">H3</button>
+              <button id="H4" class="btn px-8">H4</button>
+              </div>
+          </div>
+           </div>
+         </div>
+          
+           <!-- I-->
+         <div class="mt-9">
+          <div class="flex space-x-2">
+            <p class="mt-3">I</p>
+          <div class="gap-32 flex">
+            <div class="space-x-8">
+              <button id="I1" class="btn px-8">I1</button>
+              <button id="I2" class="btn px-8">I2</button>
+             </div>
+              <div class="space-x-8">
+                <button id="I3" class="btn px-8">I3</button>
+              <button id="I4" class="btn px-8">I4</button>
+              </div>
+          </div>
+           </div>
+         </div>
+          <!-- J -->
+          <div class="mt-9">
+            <div class="flex space-x-2">
+              <p class="mt-3">J</p>
+            <div class="gap-32 flex">
+              <div class="space-x-8">
+                <button id="J1" class="btn px-8">J1</button>
+                <button id="J2" class="btn px-8">J2</button>
+               </div>
+                <div class="space-x-9">
+                  <button id="J3" class="btn px-8">J3</button>
+                <button id="J4" class="btn px-8">J4</button>
+                </div>
+            </div>
+             </div>
+           </div>
+        </section>
+        </section>
+        <!-- seats 2 -->
+        <section>
+          <div class="flex justify-start text-2xl font-semibold text-black ">
+            <h1>Select Your Seat</h1>
+          </div>
+          <hr class=" decoration-dotted underline mx-2 mt-3">
 
 
-      </section>
-      <section>
-        
+        </section>
       </section>
     </section>
 
