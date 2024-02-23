@@ -47,21 +47,21 @@
     </header>
     <main>
         <!-- banner -->
-    <section class="mt-10 lg:ml-20 lg:mr-20 ">
-        <div class="hero min-h-screen  " style="background-image: url(./images/banner.png);">
+        <div id="banner" class="hero min-h-screen  " style="background-image: url(./images/banner.png);">
+          <section   class="mt-10 lg:ml-20 lg:mr-20 ">
             <div class="hero-overlay bg-opacity-60 "></div>
             <div class="hero-content text-center text-neutral-content">
               <div class="max-w-md space-y-5">
                 <h1 class=" text-5xl  font-serif">End-to-End Travel with Sky-ticket</h1>
                 <h1 class=" text-5xl font-bold text-[#1DD100FF] font-serif ">Ai-Poribon</h1>
                 <p class="">Travel with Sky-Drive.It is give you a great expreance .So go to take cut your ticket now.</p>
-                <button id="buy-tickets" class="btn bg-[#1DD100FF] font-bold border-green-500 rounded-md">Buy Tickets</button>
+                <button id="buy-tickets" onclick="getAiPoribon()" class="btn bg-[#1DD100FF] font-bold border-green-500 rounded-md">Buy Tickets</button>
               </div>
             </div>
           </div>
     </section>
     <!-- coupon  -->
-    <section class="text-center mt-10 ">
+    <section id="coupon" class="text-center mt-10 ">
         <div>
         <h1 class="font-serif text-black  font-bold text-3xl">Best offers for you</h1>
         </div>
