@@ -6,7 +6,7 @@ function getAiPoribon(){
     const AiPoribon=document.getElementById('Ai-poribon')
     AiPoribon.classList.remove('hidden')
 }
-const results=document.getElementsByClassName('seat-btn')
-for(let result of results){
-    
-}
+
+
+
+
