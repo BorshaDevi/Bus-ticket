@@ -6,16 +6,16 @@ function getAiPoribon(){
     const AiPoribon=document.getElementById('Ai-poribon')
     AiPoribon.classList.remove('hidden')
 }
-
-// const seatNumber=document.getElementById('seat-number').innerText
-// console.log(seatNumber)
-
-getNumberInter('seat-number')
 function getNumberInter(elementId){
     const re=document.getElementById(elementId).innerText;
     const number=parseInt(re)
     return number
 }
+const seatNumber=getNumberInter('seat-number')
+console.log(seatNumber)
+const seatsLeft=getNumberInter('seats-left')
+console.log(seatsLeft)
+
 
 
 
