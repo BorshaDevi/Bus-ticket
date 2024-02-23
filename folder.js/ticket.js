@@ -17,7 +17,15 @@ const seatsLeft=getNumberInter('seats-left')
 const seatBtn=document.getElementsByClassName('seat-btn')
 for(let seat of seatBtn){
     seat.addEventListener('click',function(event){
-        event.style.backgroundcolor='green'
+        seatnum=0
+        if(seatnum>4){
+            seat.classList.add('seatbtn')
+        event.classList.remove('hidden')
+        event.target.setAttribute('disabled',false)
+       
+
+        }
+        
     })
 }
 
