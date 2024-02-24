@@ -44,10 +44,8 @@ for(let seat of seatBtn){
             const setectedFiledId=document.getElementById('setected-filed-id')
             setectedFiledId.append(selectDiv)
 
-            
-
             getValue(takaId)  
-            
+
         } 
         else{
             alert('Your limit is done')
@@ -67,13 +65,25 @@ function getValue(value){
             seatsLeft=seatsLeft-1;
             document.getElementById('seats-left').innerText=seatsLeft
             
+            
 }
-        document.getElementById('apply-btn').addEventListener('click',function(){
-            if('NEW15'===true ){
-                grandTotal=grandTotal*15/100
-              }
-              if('Couple20'===true){
-                grandTotal=grandTotal*20/100
-              }
-        })
+            const number=document.getElementById('phoneNum').target.value
+            
+           
+                const nextclick=document.getElementById('next-id')
+                 nextclick.classList.remove('disabled')
+        
+
+
+
+
+
+        // document.getElementById('apply-btn').addEventListener('click',function(){
+        //     if('NEW15'===true ){
+        //         grandTotal=grandTotal*15/100
+        //       }
+        //       if('Couple20'===true){
+        //         grandTotal=grandTotal*20/100
+        //       }
+        // })
         
