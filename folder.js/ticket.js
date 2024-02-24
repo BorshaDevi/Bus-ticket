@@ -11,9 +11,9 @@ function getNumberInter(elementId){
     const number=parseInt(re)
     return number
 }
-const seatNumber=getNumberInter('seat-number')
-const seatsLeft=getNumberInter('seats-left')
-const takaId=getNumberInter('takaId')
+let seatNumber=getNumberInter('seat-number')
+let seatsLeft=getNumberInter('seats-left')
+let takaId=getNumberInter('takaId')
 let totalPriceInt=getNumberInter('total-price')
 let grandTotal=getNumberInter('Grand-Total')
 
@@ -27,9 +27,7 @@ for(let seat of seatBtn){
             seat.classList.add('text-white')
             seat.classList.add('seatbtn')
             
-
-            // const seatLeftNum=seatsLeft-1
-            // console.log(seatLeftNum)
+            
 
             const selectDiv=document.createElement('div')
             selectDiv.classList.add('setected-filedid')
@@ -44,18 +42,28 @@ for(let seat of seatBtn){
             selectDiv.append(p3)
             const setectedFiledId=document.getElementById('setected-filed-id')
             setectedFiledId.append(selectDiv)
-            getValue(takaId)
 
-           
+            getValue(takaId)  
         } 
+        else{
+            alert('Your limit is done')
+        }
     })
+    
 }
 
 function getValue(value){
-    totalPriceInt=totalPriceInt+takaId
-     document.getElementById('total-price').innerText=totalPriceInt
-     document.getElementById('Grand-Total').innerText=totalPriceInt
-   
+            totalPriceInt=totalPriceInt+takaId
+            document.getElementById('total-price').innerText=totalPriceInt
+            grandTotal=grandTotal+takaId
+            document.getElementById('Grand-Total').innerText=grandTotal
+
+            seatNumber=seatNumber+1
+            document.getElementById('seat-number').innerText=seatNumber
+
+            seatsLeft=seatsLeft-1;
+            document.getElementById('seats-left').innerText=seatsLeft
+            
 }
 
 
