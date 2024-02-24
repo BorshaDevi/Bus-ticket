@@ -17,17 +17,15 @@ const takaId=getNumberInter('takaId')
 
 
 
-
 seatnum=0
 const seatBtn=document.getElementsByClassName('seat-btn')
 for(let seat of seatBtn){
     seat.addEventListener('click',function(){ 
         if(seatnum<4===true){
             seatnum=1+seatnum
-            seat.classList.add('seatbtn')
             seat.classList.add('text-white')
-            seat.target.setAttribute('disabled',false)
-            seat.classList.remove('seatbtn')
+            seat.classList.add('seatbtn')
+            
 
             // const seatLeftNum=seatsLeft-1
             // console.log(seatLeftNum)
@@ -45,8 +43,18 @@ for(let seat of seatBtn){
             selectDiv.append(p3)
             const setectedFiledId=document.getElementById('setected-filed-id')
             setectedFiledId.append(selectDiv)
+            getValue(p3)
+
+           
         } 
     })
+}
+
+function getValue(value){
+    console.log(value)
+    const totalPriceInt=getNumberInter('total-price')
+     totalPriceInt+p3
+   
 }
 
 

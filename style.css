@@ -1,7 +1,7 @@
 .seatbtn{
     background-color: rgb(62, 150, 62);
 }
-#setected-filedid{
+.setected-filedid{
     display: flex;
     justify-content: space-between;
 }
