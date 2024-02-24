@@ -43,7 +43,7 @@ for(let seat of seatBtn){
             selectDiv.append(p3)
             const setectedFiledId=document.getElementById('setected-filed-id')
             setectedFiledId.append(selectDiv)
-            getValue(p3)
+            getValue(takaId)
 
            
         } 
@@ -51,9 +51,9 @@ for(let seat of seatBtn){
 }
 
 function getValue(value){
-    console.log(value)
     const totalPriceInt=getNumberInter('total-price')
-     totalPriceInt+p3
+     sum=totalPriceInt+takaId
+     document.getElementById('total-price').innerText=sum
    
 }
 
