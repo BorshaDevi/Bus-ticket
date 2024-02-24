@@ -14,7 +14,8 @@ function getNumberInter(elementId){
 const seatNumber=getNumberInter('seat-number')
 const seatsLeft=getNumberInter('seats-left')
 const takaId=getNumberInter('takaId')
-
+let totalPriceInt=getNumberInter('total-price')
+let grandTotal=getNumberInter('Grand-Total')
 
 
 seatnum=0
@@ -51,9 +52,9 @@ for(let seat of seatBtn){
 }
 
 function getValue(value){
-    const totalPriceInt=getNumberInter('total-price')
-     sum=totalPriceInt+takaId
-     document.getElementById('total-price').innerText=sum
+    totalPriceInt=totalPriceInt+takaId
+     document.getElementById('total-price').innerText=totalPriceInt
+     document.getElementById('Grand-Total').innerText=totalPriceInt
    
 }
 
