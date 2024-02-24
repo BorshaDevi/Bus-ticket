@@ -26,9 +26,10 @@ for(let seat of seatBtn){
             seatnum=1+seatnum
             seat.classList.add('text-white')
             seat.classList.add('seatbtn')
-            
-            
 
+            // const apply=document.getElementById('apply-btn')
+            // apply.classList.remove('disabled')
+             
             const selectDiv=document.createElement('div')
             selectDiv.classList.add('setected-filedid')
             const p1=document.createElement('p')
@@ -43,13 +44,15 @@ for(let seat of seatBtn){
             const setectedFiledId=document.getElementById('setected-filed-id')
             setectedFiledId.append(selectDiv)
 
+            
+
             getValue(takaId)  
+            
         } 
         else{
             alert('Your limit is done')
         }
-    })
-    
+    })  
 }
 
 function getValue(value){
@@ -65,8 +68,12 @@ function getValue(value){
             document.getElementById('seats-left').innerText=seatsLeft
             
 }
-
-
-
-
-
+        document.getElementById('apply-btn').addEventListener('click',function(){
+            if('NEW15'===true ){
+                grandTotal=grandTotal*15/100
+              }
+              if('Couple20'===true){
+                grandTotal=grandTotal*20/100
+              }
+        })
+        
