@@ -17,6 +17,8 @@ let takaId=getNumberInter('takaId')
 let totalPriceInt=getNumberInter('total-price')
 let grandTotal=getNumberInter('Grand-Total')
 
+discountNew=grandTotal*15/100
+discountCouple=grandTotal*20/100
 
 seatnum=0
 const seatBtn=document.getElementsByClassName('seat-btn')
@@ -27,9 +29,7 @@ for(let seat of seatBtn){
             seat.classList.add('text-white')
             seat.classList.add('seatbtn')
 
-            // const apply=document.getElementById('apply-btn')
-            // apply.classList.remove('disabled')
-             
+            
             const selectDiv=document.createElement('div')
             selectDiv.classList.add('setected-filedid')
             const p1=document.createElement('p')
@@ -67,23 +67,21 @@ function getValue(value){
             
             
 }
-            const number=document.getElementById('phoneNum').target.value
-            
-           
-                const nextclick=document.getElementById('next-id')
-                 nextclick.classList.remove('disabled')
         
+            
+        document.getElementById('coupon-field').addEventListener('keyup',function(event){
+            const coupon=event.target.value
+        if( coupon=== 'NEW15'){
+            document.getElementById('apply-btn').addEventListener('click',function(){
+                grandTotal=totalPriceInt-discountNew 
+            })              
+                  }
 
+                  else if(coupon==='Couple20'){
+                    document.getElementById('apply-btn').addEventListener('click',function(){
+                        grandTotal=totalPriceInt-discountCouple
+                    })   
+                    }
 
-
-
-
-        // document.getElementById('apply-btn').addEventListener('click',function(){
-        //     if('NEW15'===true ){
-        //         grandTotal=grandTotal*15/100
-        //       }
-        //       if('Couple20'===true){
-        //         grandTotal=grandTotal*20/100
-        //       }
-        // })
+        })
         
