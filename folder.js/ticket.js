@@ -89,7 +89,7 @@ function getValue(value){
             const numberB=event.target.value
             
             const nextBtn=document.getElementById('next-id')
-            if(numberB){
+            if(numberB ){
                 nextBtn.removeAttribute('disabled')
             }
             else{
