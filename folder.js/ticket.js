@@ -17,8 +17,7 @@ let takaId=getNumberInter('takaId')
 let totalPriceInt=getNumberInter('total-price')
 let grandTotal=getNumberInter('Grand-Total')
 
-discountNew=grandTotal*15/100
-discountCouple=grandTotal*20/100
+
 
 seatnum=0
 const seatBtn=document.getElementsByClassName('seat-btn')
@@ -69,20 +68,21 @@ function getValue(value){
 }
         
             
-        document.getElementById('coupon-field').addEventListener('keyup',function(event){
-            const coupon=event.target.value
+        document.getElementById('apply-btn').addEventListener('click',function(){
+            const coupon=document.getElementById("coupon-field").value
          if( coupon === 'NEW15'){
-            document.getElementById('apply-btn').addEventListener('click',function(){
-                grandTotal=totalPriceInt-discountNew 
-            })              
+            let totalPriceInt=getNumberInter('total-price')           
+                    // discountNew=totalPriceInt*0.85
+                document.getElementById('Grand-Total').innerText=discountNew
+                
                   }
 
                   else if(coupon ==='Couple20'){
-                    document.getElementById('apply-btn').addEventListener('click',function(){
-                        grandTotal=totalPriceInt-discountCouple
-                    })   
+                    let totalPriceInt=getNumberInter('total-price')
+                    discountNew=totalPriceInt*0.8
+                document.getElementById('Grand-Total').innerText=discountNew
                     }
-
+                
         })
 
         document.getElementById('phoneNum').addEventListener('keyup',function(event){
