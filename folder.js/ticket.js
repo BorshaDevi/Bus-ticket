@@ -77,7 +77,7 @@ function getValue(value){
             })              
                   }
 
-                  else if(coupon==='Couple20'){
+                  else if(coupon ==='Couple20'){
                     document.getElementById('apply-btn').addEventListener('click',function(){
                         grandTotal=totalPriceInt-discountCouple
                     })   
