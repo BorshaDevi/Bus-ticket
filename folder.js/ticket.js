@@ -72,7 +72,7 @@ function getValue(value){
             const coupon=document.getElementById("coupon-field").value
          if( coupon === 'NEW15'){
             let totalPriceInt=getNumberInter('total-price')           
-                    // discountNew=totalPriceInt*0.85
+                    discountNew=totalPriceInt*0.85
                 document.getElementById('Grand-Total').innerText=discountNew
                 
                   }
