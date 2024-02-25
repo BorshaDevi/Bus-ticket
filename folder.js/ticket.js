@@ -71,7 +71,7 @@ function getValue(value){
             
         document.getElementById('coupon-field').addEventListener('keyup',function(event){
             const coupon=event.target.value
-        if( coupon=== 'NEW15'){
+         if( coupon === 'NEW15'){
             document.getElementById('apply-btn').addEventListener('click',function(){
                 grandTotal=totalPriceInt-discountNew 
             })              
@@ -82,6 +82,19 @@ function getValue(value){
                         grandTotal=totalPriceInt-discountCouple
                     })   
                     }
+
+        })
+
+        document.getElementById('phoneNum').addEventListener('keyup',function(event){
+            const numberB=event.target.value
+            
+            const nextBtn=document.getElementById('next-id')
+            if(numberB){
+                nextBtn.removeAttribute('disabled')
+            }
+            else{
+                nextBtn.setAttribute('disabled')
+            }
 
         })
         
