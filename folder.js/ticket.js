@@ -97,4 +97,14 @@ function getValue(value){
             }
 
         })
+        document.getElementById('next-id').addEventListener('click',function(event){
+            const nav=document.getElementById('navbar')
+            nav.classList.add('hidden')
+
+            const ai=document.getElementById('Ai-poribon')
+            ai.classList.add('hidden')
+
+            const suss=document.getElementById('PaymentSus')
+            suss.classList.remove('hidden')
+        })
         
