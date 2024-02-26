@@ -66,24 +66,36 @@ function getValue(value){
             
             
 }
+            
+            document.getElementById('apply-btn').addEventListener('click',function(){
+                const coupon=document.getElementById("coupon-field").value
+                    if( coupon === 'NEW15'){
+                        let totalPriceInt=getNumberInter('total-price')           
+                                discountNew=totalPriceInt*0.85
+                            document.getElementById('Grand-Total').innerText=discountNew
+                            const applyNew=document.getElementById('apply-btn')
+                            applyNew.classList.add('hidden')
+                            const couponNew=document.getElementById('coupon-field')
+                            couponNew.classList.add('hidden')
+                              }
+                              else if(coupon ==='Couple20'){
+                                let totalPriceInt=getNumberInter('total-price')
+                                discountNew=totalPriceInt*0.8
+                            document.getElementById('Grand-Total').innerText=discountNew
+                            const applyNew=document.getElementById('apply-btn')
+                            applyNew.classList.add('hidden')
+                            const couponNew=document.getElementById('coupon-field')
+                            couponNew.classList.add('hidden')
+                                }   
+                    else{
+                        alert('Apply Validate Coupon')
+                    }
+            })
         
             
-        document.getElementById('apply-btn').addEventListener('click',function(){
-            const coupon=document.getElementById("coupon-field").value
-         if( coupon === 'NEW15'){
-            let totalPriceInt=getNumberInter('total-price')           
-                    discountNew=totalPriceInt*0.85
-                document.getElementById('Grand-Total').innerText=discountNew
-                
-                  }
+       
 
-                  else if(coupon ==='Couple20'){
-                    let totalPriceInt=getNumberInter('total-price')
-                    discountNew=totalPriceInt*0.8
-                document.getElementById('Grand-Total').innerText=discountNew
-                    }
-                
-        })
+        
 
         document.getElementById('phoneNum').addEventListener('keyup',function(event){
             const numberB=event.target.value
