@@ -71,8 +71,9 @@ function getValue(value){
                 const coupon=document.getElementById("coupon-field").value
                     if( coupon === 'NEW15'){
                         let totalPriceInt=getNumberInter('total-price')           
-                                discountNew=totalPriceInt*0.85
-                            document.getElementById('Grand-Total').innerText=discountNew
+                                discountNew=totalPriceInt*15/100
+                                grandNew=totalPriceInt-discountNew
+                            document.getElementById('Grand-Total').innerText=grandNew
                             const applyNew=document.getElementById('apply-btn')
                             applyNew.classList.add('hidden')
                             const couponNew=document.getElementById('coupon-field')
@@ -80,8 +81,9 @@ function getValue(value){
                               }
                               else if(coupon ==='Couple20'){
                                 let totalPriceInt=getNumberInter('total-price')
-                                discountNew=totalPriceInt*0.8
-                            document.getElementById('Grand-Total').innerText=discountNew
+                                discountCouple=totalPriceInt*20/100
+                                grandCouple=totalPriceInt-discountCouple
+                            document.getElementById('Grand-Total').innerText=grandCouple
                             const applyNew=document.getElementById('apply-btn')
                             applyNew.classList.add('hidden')
                             const couponNew=document.getElementById('coupon-field')
